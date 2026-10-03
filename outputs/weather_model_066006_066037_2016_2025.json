@@ -1,0 +1,746 @@
+{
+  "name": "SydneyWeatherRecent",
+  "type": "CorrelatedMonthlyWeather",
+  "location": {
+    "name": "Sydney"
+  },
+  "training_period": {
+    "start": "2016-01-01",
+    "end": "2025-12-31"
+  },
+  "source": {
+    "provider": "Bureau of Meteorology",
+    "solar_exposure": {
+      "product": "IDCJAC0016",
+      "reference": "0138582612",
+      "description": "Daily Global Solar Exposure Climate Data",
+      "quality_information": "Global solar exposure data derived from satellite observations do not go through the standard quality control processes of most ground-based observations. Thus, there is no quality flag.",
+      "missing_data_information": "Gaps may exist in the data for a number of reasons, including temporary errors in the satellite data (for example, interference in the satellite downlink signal) or the longer term failure of a satellite.",
+      "measurement_information": "Global solar exposure data in this product were not measured at the site. Instead, they have been derived from satellite data for the co-ordinates at which the station is currently located. Solar exposure data have been derived from satellite imagery processed by the Bureau of Meteorology from the Geostationary Meteorological Satellites GMS-4, GMS-5, and MTSAT-1R, MTSAT-2 of the Japan Meteorological Agency, and the USA's National Oceanic & Atmospheric Administration (NOAA) GOES-9 satellite. Small changes may occasionally occur in the values following improvements to the data processing system.",
+      "export_creation_information": "Fri 02 Oct 2026 03:28:20 AM GMT-00:00 from Climate Data Online, Bureau of Meteorology.",
+      "note_measurement_description": "Daily global solar exposure (MJ/m*m)",
+      "note_units": "MJ/m*m",
+      "measurement_description": "Daily global solar exposure (MJ/m*m)",
+      "source_units": "MJ/m*m",
+      "dataset_suffix": "1800",
+      "station": {
+        "id": "066006",
+        "name": "SYDNEY BOTANIC GARDENS",
+        "latitude": -33.87,
+        "longitude": 151.22,
+        "elevation_metres": 15.0,
+        "opened_year": 1885,
+        "state": "NSW"
+      },
+      "available_period": {
+        "start": "1990-01-01",
+        "end": "2026-10-01"
+      },
+      "files": {
+        "note": "IDCJAC0016_066006_1800_Note.txt",
+        "data": "IDCJAC0016_066006_1800_Data.csv"
+      },
+      "sha256": {
+        "note": "105506b9f3c3eea8241ab7ec2de5cde05391c16051e7ad1502cbc5b588d88446",
+        "data": "6b4c576bbc561425dda5f39f93d2848be19848e1972c1f073fca76e74a9a6248"
+      },
+      "training_quality_counts": {},
+      "training_absent_date_count": 0
+    },
+    "temperature_minimum": {
+      "product": "IDCJAC0011",
+      "reference": "0138584059",
+      "description": "Daily Minimum Temperature Climate Data",
+      "quality_information": "Y: completed quality control and acceptable N: not yet completed quality control process or date uncertain, quality not assured Climate data pass through a number of stages in quality control which occurs over a period of time. Data are only included in this product if either one of the following is true: i) If the Quality Flag = Y, then the data have completed the normal quality control process and we do not believe them to be suspect or wrong; ii) If the Quality Flag = N, then no significant errors have yet been detected, although this may change during a later stage of the quality control process. This also appplies if the data have completed the normal quality control process but there is some uncertainty about the date on which the temperature occured.",
+      "missing_data_information": "Very few stations have a complete unbroken record of climate information. A station may have been closed, re-opened, upgraded to a full weather station or downgraded to a rainfall only station during its existence, resulting in breaks in the record for some or all elements. It is important to note that damaged instrumentation can result in gaps in the record for one (or more) meteorological element. In contrast the absence or illness of an observer may result in gaps in the record for all elements at a particular site.",
+      "time_information": "For a part of the year some Australian States adopt Daylight Savings Time (DST). The changeover dates vary from State to State and year to year. More information can be found at: http://www.bom.gov.au/climate/averages/tables/daysavtm.shtml The majority of maximum and minimum temperature data have been recorded at 9am local time. The minimum temperature measured at that time is recorded against the day on which it was measured, while the maximum temperature is recorded against the previous day.",
+      "export_creation_information": "Fri 02 Oct 2026 04:22:50 AM GMT-00:00 from Climate Data Online, Bureau of Meteorology.",
+      "note_measurement_description": "Daily minimum temperature (degrees Celsius)",
+      "note_units": "degrees Celsius",
+      "measurement_description": "Minimum temperature (Degree C)",
+      "source_units": "Degree C",
+      "dataset_suffix": "1800",
+      "station": {
+        "id": "066037",
+        "name": "SYDNEY AIRPORT AMO",
+        "latitude": -33.95,
+        "longitude": 151.17,
+        "elevation_metres": 6.0,
+        "opened_year": 1929,
+        "state": "NSW"
+      },
+      "available_period": {
+        "start": "1939-01-01",
+        "end": "2026-10-02"
+      },
+      "files": {
+        "note": "IDCJAC0011_066037_1800_Note.txt",
+        "data": "IDCJAC0011_066037_1800_Data.csv"
+      },
+      "sha256": {
+        "note": "ca63f146eee0cb2a71f558a3a0476d7319d184ab1e57ae5371bb3cc6f457dc6d",
+        "data": "806e9bfc74c999a6c7e46f5eedb16bb6566e5313c6fd41c5acc475bfe6c03375"
+      },
+      "training_quality_counts": {
+        "N": 3469,
+        "Y": 159,
+        "blank": 25
+      },
+      "training_absent_date_count": 0
+    },
+    "temperature_maximum": {
+      "product": "IDCJAC0010",
+      "reference": "0138584016",
+      "description": "Daily Maximum Temperature Climate Data",
+      "quality_information": "Y: completed quality control and acceptable N: not yet completed quality control process or date uncertain, quality not assured Climate data pass through a number of stages in quality control which occurs over a period of time. Data are only included in this product if either one of the following is true: i) If the Quality Flag = Y, then the data have completed the normal quality control process and we do not believe them to be suspect or wrong; ii) If the Quality Flag = N, then no significant errors have yet been detected, although this may change during a later stage of the quality control process. This also appplies if the data have completed the normal quality control process but there is some uncertainty about the date on which the temperature occured.",
+      "missing_data_information": "Very few stations have a complete unbroken record of climate information. A station may have been closed, re-opened, upgraded to a full weather station or downgraded to a rainfall only station during its existence, resulting in breaks in the record for some or all elements. It is important to note that damaged instrumentation can result in gaps in the record for one (or more) meteorological element. In contrast the absence or illness of an observer may result in gaps in the record for all elements at a particular site.",
+      "time_information": "For a part of the year some Australian States adopt Daylight Savings Time (DST). The changeover dates vary from State to State and year to year. More information can be found at: http://www.bom.gov.au/climate/averages/tables/daysavtm.shtml The majority of maximum and minimum temperature data have been recorded at 9am local time. The minimum temperature measured at that time is recorded against the day on which it was measured, while the maximum temperature is recorded against the previous day.",
+      "export_creation_information": "Fri 02 Oct 2026 04:20:48 AM GMT-00:00 from Climate Data Online, Bureau of Meteorology.",
+      "note_measurement_description": "Daily maximum temperature (degrees Celsius)",
+      "note_units": "degrees Celsius",
+      "measurement_description": "Maximum temperature (Degree C)",
+      "source_units": "Degree C",
+      "dataset_suffix": "1800",
+      "station": {
+        "id": "066037",
+        "name": "SYDNEY AIRPORT AMO",
+        "latitude": -33.95,
+        "longitude": 151.17,
+        "elevation_metres": 6.0,
+        "opened_year": 1929,
+        "state": "NSW"
+      },
+      "available_period": {
+        "start": "1939-01-01",
+        "end": "2026-10-01"
+      },
+      "files": {
+        "note": "IDCJAC0010_066037_1800_Note.txt",
+        "data": "IDCJAC0010_066037_1800_Data.csv"
+      },
+      "sha256": {
+        "note": "585accadf357056d69f491706883480d3a606ada9a496f9c3a9d524abb76da59",
+        "data": "62c1f176ad57a4ac29f194b56c56618bb78de181a01d422d67b910d6e5eecfaf"
+      },
+      "training_quality_counts": {
+        "N": 3488,
+        "Y": 160,
+        "blank": 5
+      },
+      "training_absent_date_count": 0
+    }
+  },
+  "calibration": {
+    "importer_version": "1.0.0",
+    "standard_deviation": "sample",
+    "quality_policy": "retain_all_numeric_observations",
+    "missing_data_policy": "no_imputation",
+    "correlation_policy": "complete_case",
+    "matrix_tolerance": 1e-12,
+    "cholesky_minimum_pivot": 1e-12
+  },
+  "solar_exposure": {
+    "units": "MJ/m2/day",
+    "distribution": "normal",
+    "monthly": [
+      {
+        "month": 1,
+        "observation_count": 310,
+        "missing_count": 0,
+        "mean": 21.05,
+        "std_dev": 8.235634742486488,
+        "observed_minimum": 2.5,
+        "observed_maximum": 32.2
+      },
+      {
+        "month": 2,
+        "observation_count": 283,
+        "missing_count": 0,
+        "mean": 19.57844522968198,
+        "std_dev": 7.269263602236343,
+        "observed_minimum": 0.2,
+        "observed_maximum": 29.6
+      },
+      {
+        "month": 3,
+        "observation_count": 310,
+        "missing_count": 0,
+        "mean": 15.210645161290323,
+        "std_dev": 5.848921807804535,
+        "observed_minimum": 0.6,
+        "observed_maximum": 24.9
+      },
+      {
+        "month": 4,
+        "observation_count": 300,
+        "missing_count": 0,
+        "mean": 13.260333333333334,
+        "std_dev": 3.815826033326326,
+        "observed_minimum": 2.4,
+        "observed_maximum": 20.0
+      },
+      {
+        "month": 5,
+        "observation_count": 310,
+        "missing_count": 0,
+        "mean": 10.610645161290323,
+        "std_dev": 2.640348407288272,
+        "observed_minimum": 3.3,
+        "observed_maximum": 15.6
+      },
+      {
+        "month": 6,
+        "observation_count": 300,
+        "missing_count": 0,
+        "mean": 9.154333333333334,
+        "std_dev": 2.09131374966887,
+        "observed_minimum": 2.3,
+        "observed_maximum": 11.4
+      },
+      {
+        "month": 7,
+        "observation_count": 310,
+        "missing_count": 0,
+        "mean": 10.380645161290323,
+        "std_dev": 2.2526244104429476,
+        "observed_minimum": 3.1,
+        "observed_maximum": 14.7
+      },
+      {
+        "month": 8,
+        "observation_count": 310,
+        "missing_count": 0,
+        "mean": 12.785483870967742,
+        "std_dev": 3.104566360924344,
+        "observed_minimum": 3.0,
+        "observed_maximum": 17.4
+      },
+      {
+        "month": 9,
+        "observation_count": 300,
+        "missing_count": 0,
+        "mean": 16.766666666666666,
+        "std_dev": 4.0504868474328255,
+        "observed_minimum": 3.3,
+        "observed_maximum": 22.3
+      },
+      {
+        "month": 10,
+        "observation_count": 310,
+        "missing_count": 0,
+        "mean": 19.673548387096773,
+        "std_dev": 5.859996326576434,
+        "observed_minimum": 2.9,
+        "observed_maximum": 27.9
+      },
+      {
+        "month": 11,
+        "observation_count": 297,
+        "missing_count": 3,
+        "mean": 22.186195286195286,
+        "std_dev": 7.13633010970677,
+        "observed_minimum": 2.9,
+        "observed_maximum": 31.0
+      },
+      {
+        "month": 12,
+        "observation_count": 310,
+        "missing_count": 0,
+        "mean": 23.14709677419355,
+        "std_dev": 7.984218330748727,
+        "observed_minimum": 1.8,
+        "observed_maximum": 32.1
+      }
+    ]
+  },
+  "temperature_minimum": {
+    "units": "C",
+    "distribution": "normal",
+    "monthly": [
+      {
+        "month": 1,
+        "observation_count": 306,
+        "missing_count": 4,
+        "mean": 20.21045751633987,
+        "std_dev": 2.0462092388142747,
+        "observed_minimum": 14.3,
+        "observed_maximum": 26.1
+      },
+      {
+        "month": 2,
+        "observation_count": 280,
+        "missing_count": 3,
+        "mean": 19.9425,
+        "std_dev": 1.884214990130441,
+        "observed_minimum": 14.3,
+        "observed_maximum": 24.3
+      },
+      {
+        "month": 3,
+        "observation_count": 305,
+        "missing_count": 5,
+        "mean": 19.001639344262294,
+        "std_dev": 2.025567805650811,
+        "observed_minimum": 11.5,
+        "observed_maximum": 23.7
+      },
+      {
+        "month": 4,
+        "observation_count": 300,
+        "missing_count": 0,
+        "mean": 15.746333333333334,
+        "std_dev": 2.3430006535275067,
+        "observed_minimum": 9.9,
+        "observed_maximum": 23.1
+      },
+      {
+        "month": 5,
+        "observation_count": 310,
+        "missing_count": 0,
+        "mean": 12.234516129032258,
+        "std_dev": 2.5197605304486723,
+        "observed_minimum": 5.6,
+        "observed_maximum": 19.3
+      },
+      {
+        "month": 6,
+        "observation_count": 300,
+        "missing_count": 0,
+        "mean": 9.582,
+        "std_dev": 2.1996980638047474,
+        "observed_minimum": 4.6,
+        "observed_maximum": 16.0
+      },
+      {
+        "month": 7,
+        "observation_count": 310,
+        "missing_count": 0,
+        "mean": 9.191935483870967,
+        "std_dev": 2.2090208104062796,
+        "observed_minimum": 4.2,
+        "observed_maximum": 15.9
+      },
+      {
+        "month": 8,
+        "observation_count": 310,
+        "missing_count": 0,
+        "mean": 9.964193548387097,
+        "std_dev": 2.263022400050376,
+        "observed_minimum": 4.6,
+        "observed_maximum": 17.7
+      },
+      {
+        "month": 9,
+        "observation_count": 300,
+        "missing_count": 0,
+        "mean": 12.264,
+        "std_dev": 2.6963689197086085,
+        "observed_minimum": 6.3,
+        "observed_maximum": 21.8
+      },
+      {
+        "month": 10,
+        "observation_count": 310,
+        "missing_count": 0,
+        "mean": 14.88483870967742,
+        "std_dev": 2.3797274475683774,
+        "observed_minimum": 8.4,
+        "observed_maximum": 22.9
+      },
+      {
+        "month": 11,
+        "observation_count": 295,
+        "missing_count": 5,
+        "mean": 16.807457627118644,
+        "std_dev": 2.322460278594106,
+        "observed_minimum": 10.3,
+        "observed_maximum": 23.0
+      },
+      {
+        "month": 12,
+        "observation_count": 306,
+        "missing_count": 4,
+        "mean": 18.687908496732025,
+        "std_dev": 2.2210507492950184,
+        "observed_minimum": 12.3,
+        "observed_maximum": 27.5
+      }
+    ]
+  },
+  "temperature_maximum": {
+    "units": "C",
+    "distribution": "normal",
+    "monthly": [
+      {
+        "month": 1,
+        "observation_count": 310,
+        "missing_count": 0,
+        "mean": 28.43225806451613,
+        "std_dev": 4.558791577289018,
+        "observed_minimum": 19.2,
+        "observed_maximum": 43.7
+      },
+      {
+        "month": 2,
+        "observation_count": 283,
+        "missing_count": 0,
+        "mean": 27.730388692579506,
+        "std_dev": 3.6864995492196266,
+        "observed_minimum": 21.2,
+        "observed_maximum": 42.9
+      },
+      {
+        "month": 3,
+        "observation_count": 309,
+        "missing_count": 1,
+        "mean": 26.56084142394822,
+        "std_dev": 3.7259515394221974,
+        "observed_minimum": 19.6,
+        "observed_maximum": 40.6
+      },
+      {
+        "month": 4,
+        "observation_count": 300,
+        "missing_count": 0,
+        "mean": 24.205,
+        "std_dev": 3.2776442004916766,
+        "observed_minimum": 17.9,
+        "observed_maximum": 36.8
+      },
+      {
+        "month": 5,
+        "observation_count": 310,
+        "missing_count": 0,
+        "mean": 21.135161290322582,
+        "std_dev": 2.957644224550091,
+        "observed_minimum": 15.2,
+        "observed_maximum": 28.9
+      },
+      {
+        "month": 6,
+        "observation_count": 300,
+        "missing_count": 0,
+        "mean": 18.254,
+        "std_dev": 2.22354773919855,
+        "observed_minimum": 11.4,
+        "observed_maximum": 24.2
+      },
+      {
+        "month": 7,
+        "observation_count": 310,
+        "missing_count": 0,
+        "mean": 18.693548387096776,
+        "std_dev": 2.6813312980707122,
+        "observed_minimum": 13.3,
+        "observed_maximum": 27.0
+      },
+      {
+        "month": 8,
+        "observation_count": 309,
+        "missing_count": 1,
+        "mean": 19.583818770226536,
+        "std_dev": 3.2803127295141796,
+        "observed_minimum": 11.8,
+        "observed_maximum": 31.6
+      },
+      {
+        "month": 9,
+        "observation_count": 299,
+        "missing_count": 1,
+        "mean": 22.455183946488294,
+        "std_dev": 4.291954180501774,
+        "observed_minimum": 14.4,
+        "observed_maximum": 35.9
+      },
+      {
+        "month": 10,
+        "observation_count": 310,
+        "missing_count": 0,
+        "mean": 24.269032258064517,
+        "std_dev": 4.513468771902948,
+        "observed_minimum": 16.0,
+        "observed_maximum": 38.8
+      },
+      {
+        "month": 11,
+        "observation_count": 299,
+        "missing_count": 1,
+        "mean": 25.4809364548495,
+        "std_dev": 4.320382990803435,
+        "observed_minimum": 16.2,
+        "observed_maximum": 43.0
+      },
+      {
+        "month": 12,
+        "observation_count": 309,
+        "missing_count": 1,
+        "mean": 27.619093851132686,
+        "std_dev": 4.697366403026301,
+        "observed_minimum": 18.7,
+        "observed_maximum": 43.5
+      }
+    ]
+  },
+  "dependence_model": {
+    "type": "correlation_matrix",
+    "variables": [
+      "solar_exposure",
+      "temperature_minimum",
+      "temperature_maximum"
+    ],
+    "monthly": [
+      {
+        "month": 1,
+        "observation_count": 306,
+        "correlation_matrix": [
+          [
+            1.0,
+            0.09105333857143466,
+            0.5073941638587055
+          ],
+          [
+            0.09105333857143466,
+            1.0,
+            0.6158832924835387
+          ],
+          [
+            0.5073941638587055,
+            0.6158832924835387,
+            1.0
+          ]
+        ]
+      },
+      {
+        "month": 2,
+        "observation_count": 280,
+        "correlation_matrix": [
+          [
+            1.0,
+            0.07991584644063843,
+            0.5862741567570147
+          ],
+          [
+            0.07991584644063843,
+            1.0,
+            0.5565855587617198
+          ],
+          [
+            0.5862741567570147,
+            0.5565855587617198,
+            1.0
+          ]
+        ]
+      },
+      {
+        "month": 3,
+        "observation_count": 305,
+        "correlation_matrix": [
+          [
+            1.0,
+            -0.0029474401038515844,
+            0.5599550688582146
+          ],
+          [
+            -0.0029474401038515844,
+            1.0,
+            0.5095755000963159
+          ],
+          [
+            0.5599550688582146,
+            0.5095755000963159,
+            1.0
+          ]
+        ]
+      },
+      {
+        "month": 4,
+        "observation_count": 300,
+        "correlation_matrix": [
+          [
+            1.0,
+            -0.1530779448715121,
+            0.4900269124069639
+          ],
+          [
+            -0.1530779448715121,
+            1.0,
+            0.4362688069148948
+          ],
+          [
+            0.4900269124069639,
+            0.4362688069148948,
+            1.0
+          ]
+        ]
+      },
+      {
+        "month": 5,
+        "observation_count": 310,
+        "correlation_matrix": [
+          [
+            1.0,
+            -0.26139032190099415,
+            0.4060900039299505
+          ],
+          [
+            -0.26139032190099415,
+            1.0,
+            0.42875057183658133
+          ],
+          [
+            0.4060900039299505,
+            0.42875057183658133,
+            1.0
+          ]
+        ]
+      },
+      {
+        "month": 6,
+        "observation_count": 300,
+        "correlation_matrix": [
+          [
+            1.0,
+            -0.47448733659712317,
+            0.3055686539418273
+          ],
+          [
+            -0.47448733659712317,
+            1.0,
+            0.24292922960260582
+          ],
+          [
+            0.3055686539418273,
+            0.24292922960260582,
+            1.0
+          ]
+        ]
+      },
+      {
+        "month": 7,
+        "observation_count": 310,
+        "correlation_matrix": [
+          [
+            1.0,
+            -0.4388089458781723,
+            0.3697558863006494
+          ],
+          [
+            -0.4388089458781723,
+            1.0,
+            0.10856693156786212
+          ],
+          [
+            0.3697558863006494,
+            0.10856693156786212,
+            1.0
+          ]
+        ]
+      },
+      {
+        "month": 8,
+        "observation_count": 309,
+        "correlation_matrix": [
+          [
+            1.0,
+            -0.26224784682922203,
+            0.3875090160913952
+          ],
+          [
+            -0.26224784682922203,
+            1.0,
+            0.33377005223237194
+          ],
+          [
+            0.3875090160913952,
+            0.33377005223237194,
+            1.0
+          ]
+        ]
+      },
+      {
+        "month": 9,
+        "observation_count": 299,
+        "correlation_matrix": [
+          [
+            1.0,
+            -0.20956215029714428,
+            0.3359903181612713
+          ],
+          [
+            -0.20956215029714428,
+            1.0,
+            0.4400459668641256
+          ],
+          [
+            0.3359903181612713,
+            0.4400459668641256,
+            1.0
+          ]
+        ]
+      },
+      {
+        "month": 10,
+        "observation_count": 310,
+        "correlation_matrix": [
+          [
+            1.0,
+            -0.11196032669087176,
+            0.41611958366865404
+          ],
+          [
+            -0.11196032669087176,
+            1.0,
+            0.492837089636235
+          ],
+          [
+            0.41611958366865404,
+            0.492837089636235,
+            1.0
+          ]
+        ]
+      },
+      {
+        "month": 11,
+        "observation_count": 291,
+        "correlation_matrix": [
+          [
+            1.0,
+            -0.25108038387786663,
+            0.31261752056485725
+          ],
+          [
+            -0.25108038387786663,
+            1.0,
+            0.5209620780108921
+          ],
+          [
+            0.31261752056485725,
+            0.5209620780108921,
+            1.0
+          ]
+        ]
+      },
+      {
+        "month": 12,
+        "observation_count": 306,
+        "correlation_matrix": [
+          [
+            1.0,
+            0.0021250930072582914,
+            0.39971733394356823
+          ],
+          [
+            0.0021250930072582914,
+            1.0,
+            0.6205381403660688
+          ],
+          [
+            0.39971733394356823,
+            0.6205381403660688,
+            1.0
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bom-weather-import"
+version = "1.0.0"
+description = "Calibrate monthly weather models from BOM export directories"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+bom-weather-import = "bom_weather_import.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["bom_weather_import*"]

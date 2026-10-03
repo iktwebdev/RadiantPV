@@ -1,0 +1,250 @@
+{
+  "simulation": {
+    "settings": {
+      "scenarios": 100000,
+      "threads": 16,
+      "timesteps": 120,
+      "timestep_sizes": [
+        {
+          "start_timestep": 1,
+          "end_timestep": 120,
+          "timestep_size": "1M"
+        }
+      ]
+    },
+    "models": [
+      {
+        "name": "SydneyWeatherRecent",
+        "type": "Weather",
+        "location": {
+          "name": "Sydney",
+          "latitude_degrees": -33.87,
+          "longitude_degrees": 151.22
+        },
+        "training_period": {
+          "start": "2016-01-01",
+          "end": "2025-12-31"
+        },
+        "source": {
+          "provider": "BOM",
+          "solar_station": "066006",
+          "temperature_station": "066037"
+        },
+        "stochastic_model": {
+          "type": "multivariate_monthly"
+        },
+        "solar_exposure": {
+          "units": "MJ/m2/day",
+          "distribution": "normal",
+          "monthly": [
+            {
+              "month": 1,
+              "mean": 21.05,
+              "std_dev": 8.24
+            },
+            {
+              "month": 2,
+              "mean": 20.12,
+              "std_dev": 9.32
+            }
+          ]
+        },
+        "temperature": {
+          "units": "C",
+          "monthly_maximum": [
+            {
+              "month": 1,
+              "mean": 28.2,
+              "std_dev": 6.2
+            }
+          ],
+          "monthly_minimum": [
+            {
+              "month": 1,
+              "mean": 16.5,
+              "std_dev": 8.4
+            }
+          ]
+        },
+        "dependence_model": {
+          "type": "correlation_matrix",
+          "variables": [
+            "solar_exposure",
+            "temperature_minimum",
+            "temperature_maximum"
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "correlation_matrix": [
+                [
+                  1.0,
+                  null,
+                  null
+                ],
+                [
+                  null,
+                  1.0,
+                  null
+                ],
+                [
+                  null,
+                  null,
+                  1.0
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "SydneyWeatherLongTerm",
+        "type": "Weather",
+        "location": {
+          "name": "Sydney",
+          "latitude_degrees": -33.87,
+          "longitude_degrees": 151.22
+        },
+        "training_period": {
+          "start": "1990-01-01",
+          "end": "2025-12-31"
+        },
+        "source": {
+          "provider": "BOM",
+          "solar_station": "066006",
+          "temperature_station": "066037"
+        },
+        "stochastic_model": {
+          "type": "multivariate_monthly"
+        }
+      },
+      {
+        "name": "LGPanel",
+        "type": "Panel",
+        "rated_efficiency": 0.215,
+        "temperature_coefficient_per_c": -0.0035,
+        "reference_temperature_c": 25.0,
+        "degradation_model": "LGDegradation"
+      },
+      {
+        "name": "LGDegradation",
+        "type": "PVDegradation",
+        "model": "compound_annual",
+        "annual_rate": 0.005
+      },
+      {
+        "name": "StandardPVSystem",
+        "type": "PVSystem",
+        "performance_ratio": 0.85
+      }
+    ],
+    "installations": [
+      {
+        "name": "SydneyHouse",
+        "weather_model": "SydneyWeatherRecent",
+        "panel_model": "LGPanel",
+        "pv_system_model": "StandardPVSystem",
+        "arrays": [
+          {
+            "name": "NorthRoof",
+            "capacity_watts": 6000,
+            "azimuth_degrees": 0.0,
+            "tilt_degrees": 32.5
+          },
+          {
+            "name": "WestRoof",
+            "capacity_watts": 4000,
+            "azimuth_degrees": -90.0,
+            "tilt_degrees": 25.0
+          }
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "type": "model",
+        "name": "SydneyWeatherRecent",
+        "values": [
+          "solar_exposure",
+          "temperature_minimum",
+          "temperature_maximum"
+        ],
+        "aggregation": "monthly",
+        "statistics": [
+          "mean",
+          "std_dev",
+          "p05",
+          "p10",
+          "p50",
+          "p90",
+          "p95"
+        ],
+        "timestep_start": 1,
+        "timestep_end": 120,
+        "output_format": "csv"
+      },
+      {
+        "type": "installation",
+        "name": "SydneyHouse",
+        "values": [
+          "generation_kwh",
+          "load_kwh",
+          "battery_soc_kwh",
+          "battery_charge_kwh",
+          "battery_discharge_kwh",
+          "grid_import_kwh",
+          "grid_export_kwh"
+        ],
+        "aggregation": "monthly",
+        "statistics": [
+          "mean",
+          "std_dev",
+          "p05",
+          "p10",
+          "p50",
+          "p90",
+          "p95"
+        ],
+        "timestep_start": 1,
+        "timestep_end": 120,
+        "output_format": "csv"
+      },
+      {
+        "type": "installation",
+        "name": "SydneyHouse",
+        "values": [
+          "generation_kwh"
+        ],
+        "aggregation": "annual",
+        "statistics": [
+          "mean",
+          "std_dev",
+          "p05",
+          "p50",
+          "p95"
+        ],
+        "timestep_start": 1,
+        "timestep_end": 120,
+        "output_format": "csv"
+      },
+      {
+        "type": "installation",
+        "name": "SydneyHouse",
+        "values": [
+          "generation_kwh"
+        ],
+        "aggregation": "lifetime",
+        "statistics": [
+          "mean",
+          "std_dev",
+          "p05",
+          "p50",
+          "p95"
+        ],
+        "timestep_start": 1,
+        "timestep_end": 120,
+        "output_format": "csv"
+      }
+    ]
+  }
+}
